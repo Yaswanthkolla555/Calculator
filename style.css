@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, blue, violet);
+}
+
+h1{
+    color: white;
+    text-align: center;
+    /* margin: 1px; */
+}
+/* we use grid */
+#calc-box{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    /* to set verticsl center in grid we need to specify its height */
+    min-height: 90vh;
+    /* 100vh is the size of the standard window */
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+}
+#calc-box  button{ 
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #FFF01F;
+    box-shadow: 0 0 0.5rem #FFF01F;
+    font-size: 2rem;
+    background-color: rgb(255,255,255,0.1);
+    color: white;
+    font-weight: 400;
+}
+#calc-box button:hover{
+    background-color: rgb(255,255,255,0.5);
+
+}
+.size-two{
+    grid-column: span 2;
+}
+#outputbox{
+    grid-column: 1/-1;
+    background-color: rgb(0,0,0,0.75);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+  flex-direction: column;
+  padding: 15px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border:2px solid #dfff00;
+  box-shadow: 0 0 0.5rem #dfff00;
+}
+#outputbox #prvoutpt{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(255,255,255,0.75);
+}
+#outputbox #curroutpt{
+    font-size: 2.5rem;
+    font-weight: 700;
+    /* color: white; */
+}
